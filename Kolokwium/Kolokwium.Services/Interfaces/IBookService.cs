@@ -8,12 +8,8 @@ namespace Kolokwium.Services.Interfaces
 {
     public interface IBookService
     {
-        // BookVm AddOrUpdateProduct(AddOrUpdateBookVm addOrUpdateProductVm);
+        BookVm AddOrUpdateBook(AddOrUpdateBookVm addOrUpdateBookVm);
         BookVm GetBook(Expression<Func<Book, bool>> filterExpression);
-
-        // IEnumerable<BookVm>
-        // GetBookVms(
-        //     Expression<Func<Book, bool>> filterExpression = null
-        // );
+        IEnumerable<BookVm> GetBooks(Expression<Func<bool>> filterExpression = null);
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
 namespace Kolokwium.Model.DataModels
@@ -15,6 +16,8 @@ namespace Kolokwium.Model.DataModels
         public string LastName { get; set; }
 
         public DateTime DateOfBirth { get; set; }
+        // wyliczalna wartość, bez set i z NotMapped
+        [NotMapped]
 
         public int Age { get; }
     }
